@@ -1,0 +1,36 @@
+2024-06-07 08:25:09.015 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-07 08:25:09.034 +02:00 [INF] Probíhá zálohování databází...
+
+2024-06-07 08:25:09.185 +02:00 [INF] Databáze '4soft' nalezena. Probíhá záloha...
+2024-06-07 08:25:09.213 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.Data.SqlClient.SqlException (0x80131904): Cannot open backup device 'C:\MistniUloziste\4soft_07.06.2024_0825.bak'. Operating system error 3(Systém nemůže nalézt uvedenou cestu.).
+BACKUP DATABASE is terminating abnormally.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DatabaseBackup.BackupDatabases(String connectionString, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\DatabaseBackup.cs:line 54
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 52
+ClientConnectionId:a34afaf9-734c-4a21-a99f-7bbd0cd0d1ca
+Error Number:3201,State:1,Class:16
+2024-06-07 08:25:47.180 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-07 08:25:47.196 +02:00 [INF] Probíhá zálohování databází...
+
+2024-06-07 08:25:47.359 +02:00 [INF] Databáze '4soft' nalezena. Probíhá záloha...
+2024-06-07 08:25:47.394 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.Data.SqlClient.SqlException (0x80131904): Cannot open backup device 'D:\MSSQL\Backup\mistniuloziste\4soft_07.06.2024_0825.bak'. Operating system error 3(Systém nemůže nalézt uvedenou cestu.).
+BACKUP DATABASE is terminating abnormally.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DatabaseBackup.BackupDatabases(String connectionString, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\DatabaseBackup.cs:line 54
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 52
+ClientConnectionId:5851a5bb-deff-4805-8fc5-5f36ff68b7d8
+Error Number:3201,State:1,Class:16

@@ -1,0 +1,28 @@
+2024-06-05 09:21:17.648 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-05 09:21:17.667 +02:00 [INF] Zálohování databází přeskočeno (nevyplněné parametry).
+2024-06-05 09:21:17.667 +02:00 [INF] Probíhá zálohování složek...
+2024-06-05 09:21:17.683 +02:00 [INF] Složka 'test1' byla úspěšně uložena na místní úložiště.
+2024-06-05 09:21:17.685 +02:00 [INF] Složka 'test1' byla úspěšně uložena na síťové úložiště.
+2024-06-05 09:21:19.756 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.Net.WebException: Unable to connect to the remote server
+   at System.Net.FtpWebRequest.GetRequestStream()
+   at System.Net.WebClient.UploadBits(WebRequest request, FileStream readStream, Byte[] buffer, Int32 chunkSize, Byte[] header, Byte[] footer)
+   at System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   at FtpService.UploadFileToFtp(String fileName, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\FtpService.cs:line 15
+   at FoldersBackup.BackupFolders(String foldersToBackup, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\FoldersBackup.cs:line 49
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 62
+2024-06-05 09:21:37.723 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-05 09:21:37.742 +02:00 [INF] Zálohování databází přeskočeno (nevyplněné parametry).
+2024-06-05 09:21:37.742 +02:00 [INF] Probíhá zálohování složek...
+2024-06-05 09:21:37.761 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.IO.IOException: The file 'C:\MistniUloziste\test1_05.06.2024_0921.zip' already exists.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.DoCreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName, Nullable`1 compressionLevel, Boolean includeBaseDirectory, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.CreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName)
+   at FoldersBackup.BackupFolders(String foldersToBackup, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\FoldersBackup.cs:line 24
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 62

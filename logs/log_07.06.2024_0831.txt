@@ -1,0 +1,32 @@
+2024-06-07 08:31:00.942 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-07 08:31:00.960 +02:00 [INF] Probíhá zálohování databází...
+
+2024-06-07 08:31:01.117 +02:00 [INF] Databáze '4soft' nalezena. Probíhá záloha...
+2024-06-07 08:31:01.298 +02:00 [INF] Databáze úspěšně uložena na místní úložiště!
+2024-06-07 08:31:01.318 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.IO.FileNotFoundException: Could not find file 'C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\bin\Debug\net8.0\mistniuloziste\4soft_07.06.2024_0831.bak'.
+File name: 'C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\bin\Debug\net8.0\mistniuloziste\4soft_07.06.2024_0831.bak'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.IO.Compression.ZipFileExtensions.DoCreateEntryFromFile(ZipArchive destination, String sourceFileName, String entryName, Nullable`1 compressionLevel)
+   at System.IO.Compression.ZipFileExtensions.CreateEntryFromFile(ZipArchive destination, String sourceFileName, String entryName)
+   at DatabaseBackup.BackupDatabases(String connectionString, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\DatabaseBackup.cs:line 66
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 52
+2024-06-07 08:31:40.402 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-07 08:31:40.418 +02:00 [INF] Probíhá zálohování databází...
+
+2024-06-07 08:31:40.579 +02:00 [INF] Databáze '4soft' nalezena. Probíhá záloha...
+2024-06-07 08:31:40.746 +02:00 [INF] Databáze úspěšně uložena na místní úložiště!
+2024-06-07 08:31:40.760 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.IO.IOException: The file 'C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\bin\Debug\net8.0\mistniuloziste\4soft_07.06.2024_0831.zip' already exists.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at DatabaseBackup.BackupDatabases(String connectionString, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\DatabaseBackup.cs:line 64
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 52

@@ -1,0 +1,29 @@
+2024-06-06 10:54:22.722 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-06 10:54:22.742 +02:00 [INF] Zálohování databází přeskočeno (nevyplněné parametry).
+2024-06-06 10:54:22.742 +02:00 [INF] Probíhá zálohování složek...
+2024-06-06 10:54:22.759 +02:00 [INF] Složka 'test1' byla úspěšně uložena na místní úložiště.
+2024-06-06 10:54:22.761 +02:00 [INF] Složka 'test1' byla úspěšně uložena na síťové úložiště.
+2024-06-06 10:54:22.761 +02:00 [INF] Ukládání na ftp server přeskočeno.
+2024-06-06 10:54:22.762 +02:00 [INF] Složka 'test1' byla úspěšně zálohována!
+
+2024-06-06 10:54:22.764 +02:00 [INF] Složka 'test2' byla úspěšně uložena na místní úložiště.
+2024-06-06 10:54:22.765 +02:00 [INF] Složka 'test2' byla úspěšně uložena na síťové úložiště.
+2024-06-06 10:54:22.766 +02:00 [INF] Ukládání na ftp server přeskočeno.
+2024-06-06 10:54:22.766 +02:00 [INF] Složka 'test2' byla úspěšně zálohována!
+
+2024-06-06 10:54:44.471 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-06 10:54:44.490 +02:00 [INF] Zálohování databází přeskočeno (nevyplněné parametry).
+2024-06-06 10:54:44.491 +02:00 [INF] Probíhá zálohování složek...
+
+2024-06-06 10:54:44.511 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.IO.IOException: The file 'C:\MistniUloziste\test1_06.06.2024_1054.zip' already exists.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.DoCreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName, Nullable`1 compressionLevel, Boolean includeBaseDirectory, Encoding entryNameEncoding)
+   at System.IO.Compression.ZipFile.CreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName)
+   at FoldersBackup.BackupFolders(String foldersToBackup, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\FoldersBackup.cs:line 24
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 62

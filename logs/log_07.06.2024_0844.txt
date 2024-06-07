@@ -1,0 +1,15 @@
+2024-06-07 08:44:27.219 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
+2024-06-07 08:44:27.238 +02:00 [INF] Probíhá zálohování databází...
+
+2024-06-07 08:44:27.440 +02:00 [INF] Databáze '4soft' nalezena. Probíhá záloha...
+2024-06-07 08:44:27.578 +02:00 [INF] Databáze úspěšně uložena na místní úložiště!
+2024-06-07 08:44:27.596 +02:00 [ERR] Záloha se nezdařila. Chybová hláška: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\MSSQL\backup\mistniuloziste\4soft_07.06.2024_0844.zip'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   at System.IO.Compression.ZipFile.Open(String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding)
+   at DatabaseBackup.BackupDatabases(String connectionString, String localBackupPath, String networkBackupPath, String ftpServer, String ftpFolder, String ftpUsername, String ftpPassword) in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\DatabaseBackup.cs:line 65
+   at Program.Main() in C:\Users\JANECEKD\source\repos\ZalohaDatabaze\ZalohaDatabaze\Program.cs:line 52
