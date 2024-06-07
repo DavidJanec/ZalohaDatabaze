@@ -1,8 +1,0 @@
-2024-06-05 09:10:58.356 +02:00 [INF] Parametry databáze, uložišť a FTP serveru nastaveny!
-2024-06-05 09:10:58.374 +02:00 [INF] Zálohování databází přeskočeno (nevyplněné parametry).
-2024-06-05 09:10:58.375 +02:00 [INF] Probíhá zálohování složek...
-2024-06-05 09:10:58.396 +02:00 [INF] Složka 'test1' byla úspěšně uložena na místní úložiště.
-2024-06-05 09:10:58.398 +02:00 [INF] Složka 'test1' byla úspěšně uložena na síťové úložiště.
-2024-06-05 09:10:58.399 +02:00 [INF] Ukládání na ftp server přeskočeno.
-2024-06-05 09:10:58.399 +02:00 [INF] Složka 'test1' byla úspěšně zálohována!
-2024-06-05 09:10:58.400 +02:00 [WRN] Složka 'C:\test2' neexistuje!
