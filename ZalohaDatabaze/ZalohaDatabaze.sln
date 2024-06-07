@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZalohaDatabaze", "ZalohaDatabaze\ZalohaDatabaze.csproj", "{5275BEA2-E16A-426B-B20D-3530707A50DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5275BEA2-E16A-426B-B20D-3530707A50DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5275BEA2-E16A-426B-B20D-3530707A50DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5275BEA2-E16A-426B-B20D-3530707A50DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5275BEA2-E16A-426B-B20D-3530707A50DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50A8375D-9B85-48E3-B857-7024F6FF8BBC}
+	EndGlobalSection
+EndGlobal
